@@ -8,6 +8,7 @@ public class SendOSCResolume : MonoBehaviour
     public string ipAddress = "127.0.0.1";      //Resolume
     public int port = 7000;     //ResolumeのOSCポート番号
     public OSCTransmitter transmitter;      //OSCのTransmitter参照
+    
 
 
     // Start is called before the first frame update
@@ -17,6 +18,7 @@ public class SendOSCResolume : MonoBehaviour
         transmitter = gameObject.AddComponent<OSCTransmitter>();
         transmitter.RemoteHost = ipAddress;
         transmitter.RemotePort = port;
+        GetComponent<AudioSource>();        //オーディオソースコンポーネントを取得
     }
 
     
@@ -34,6 +36,8 @@ public class SendOSCResolume : MonoBehaviour
     public void ChangeAllLayers(int columnNumber)
     {
         Debug.Log("すべてのレイヤーのコラム: " + columnNumber + " に切り替え");
+
+
 
         // 例えば、レイヤーが1から3まであると仮定してそれぞれ切り替える
         for (int layer = 1; layer <= 3; layer++)
