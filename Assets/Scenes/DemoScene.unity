@@ -366,7 +366,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2466786070548681179, guid: 7cd9467ec8108054ba87417ad350e2fe, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2466786070548681179, guid: 7cd9467ec8108054ba87417ad350e2fe, type: 3}
       propertyPath: m_LocalPosition.x
@@ -708,6 +708,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isWindActive: 1
+--- !u!95 &685295229
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 8
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685295219}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1134,7 +1155,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: a8d3bccddd4d7d740a7d66ad5482803e, type: 2}
     - target: {fileID: 8436203241575795419, guid: 875ebe33fd8da414989099786ea49704, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8436203241575795419, guid: 875ebe33fd8da414989099786ea49704, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1310,7 +1331,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1581199567
 GameObject:
