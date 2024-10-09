@@ -232,6 +232,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038439650}
+        m_TargetAssemblyTypeName: AudioList, Assembly-CSharp
+        m_MethodName: AudioSouceAttach
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &75904639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -282,7 +294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93c39bc4afebbea4c9e3e9d6c248b296, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ipAddress: 192.168.3.2
+  ipAddress: 10.192.105.1
   port: 7000
   transmitter: {fileID: 375681533}
   DisplayChange: 0
@@ -1645,7 +1657,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questionText: {fileID: 766959445}
   answerText: {fileID: 1525822959}
-  questioncontents: 
+  questionContents: 
   answerContens: 
 --- !u!1 &1617970175
 GameObject:
@@ -1857,6 +1869,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2038439650}
+        m_TargetAssemblyTypeName: AudioList, Assembly-CSharp
+        m_MethodName: AudioSouceAttach
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1962157202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1907,7 +1931,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93c39bc4afebbea4c9e3e9d6c248b296, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ipAddress: 192.168.3.2
+  ipAddress: 10.192.105.1
   port: 7000
   transmitter: {fileID: 375681533}
   DisplayChange: 0
@@ -2053,7 +2077,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: df5abc14478b84a4d85195950abe5533, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -2151,9 +2175,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59e40142e531ed34097a74f36a10bb1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audiolist:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  audioList:
+  - {fileID: 8300000, guid: eed2451bbd4264da8b6c27c92df62faf, type: 3}
+  - {fileID: 8300000, guid: c24b7e715582b4ccba37bbb827676c06, type: 3}
