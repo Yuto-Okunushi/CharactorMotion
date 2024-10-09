@@ -8,7 +8,7 @@ public class GetQuestionText : MonoBehaviour
 {
     [SerializeField] Text questionText;
     [SerializeField] Text answerText;
-    public string questioncontents;
+    public string questionContents;
     public string answerContens;
 
     private void Start()
@@ -25,9 +25,9 @@ public class GetQuestionText : MonoBehaviour
     //SCV‚Ì“à—e‚ð•\Ž¦
     public void TextDisplay()
     {
-        questioncontents = GameManager.GetQuestion();
+        questionContents = GameManager.GetQuestion();
         answerContens = GameManager.GetAnswer();
-        questionText.text = questioncontents;
+        questionText.text = questionContents;
         answerText.text = answerContens;
     }
 }
