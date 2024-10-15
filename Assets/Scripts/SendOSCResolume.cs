@@ -27,6 +27,7 @@ public class SendOSCResolume : MonoBehaviour
         transmitter.RemotePort = port;
         GetComponent<AudioSource>();        //オーディオソースコンポーネントを取得
 
+
         //SCV関連
         csvFile = Resources.Load("MotionController") as TextAsset; // ResourcesにあるCSVファイルを格納
         StringReader reader = new StringReader(csvFile.text); // TextAssetをStringReaderに変換
@@ -41,31 +42,6 @@ public class SendOSCResolume : MonoBehaviour
         {
             // データの表示
             Debug.Log("質問内容：" + csvData[i][0] + ", Animation：" + csvData[i][1] + ", Voice: " + csvData[i][2] + "picture: " + csvData[i][3]);
-        }
-    }
-
-    
-    public void ChangeColumn(int layerNumber, int columnNumber)
-    {
-        Debug.Log("ボタンが押された");
-        //OSCメッセージ作成
-        var message = new OSCMessage("/composition/layers/" + layerNumber + "/clips/" + columnNumber + "/connect");
-
-        //作成したメッセージを送信
-        transmitter.Send(message);
-    }
-
-    // すべてのレイヤーのColumnを変更する
-    public void ChangeAllLayers()
-    {
-        Debug.Log("すべてのレイヤーのコラム: " + DisplayChange + " に切り替え");
-
-        DisplayChange = GameManager.GetPicture();
-
-        // 例えば、レイヤーが1から3まであると仮定してそれぞれ切り替える
-        for (int layer = 1; layer <= 3; layer++)
-        {
-            ChangeColumn(layer, DisplayChange);
         }
     }
 
@@ -116,4 +92,29 @@ public class SendOSCResolume : MonoBehaviour
 
 
     }
+
+    public void ChangeColumn(int layerNumber, int columnNumber)
+    {
+        Debug.Log("ボタンが押された");
+        //OSCメッセージ作成
+        var message = new OSCMessage("/composition/layers/" + layerNumber + "/clips/" + columnNumber + "/connect");
+        //作成したメッセージを送信
+        transmitter.Send(message);
+    }
+
+    // すべてのレイヤーのColumnを変更する
+    public void ChangeAllLayers()
+    {
+        Debug.Log("すべてのレイヤーのコラム: " + DisplayChange + " に切り替え");
+
+        DisplayChange = GameManager.GetPicture();
+
+        // 例えば、レイヤーが1から3まであると仮定してそれぞれ切り替える
+        for (int layer = 1; layer <= 3; layer++)
+        {
+            ChangeColumn(layer, DisplayChange);
+        }
+    }
+
+    
 }

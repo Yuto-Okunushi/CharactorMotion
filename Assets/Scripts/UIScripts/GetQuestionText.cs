@@ -11,6 +11,8 @@ public class GetQuestionText : MonoBehaviour
     public string questionContents;
     public string answerContens;
 
+    public int OSCcheckint;
+
     private void Start()
     {
         //テキストコンポーネント取得
@@ -29,5 +31,7 @@ public class GetQuestionText : MonoBehaviour
         answerContens = GameManager.GetAnswer();
         questionText.text = questionContents;
         answerText.text = answerContens;
+
+        
     }
 }
