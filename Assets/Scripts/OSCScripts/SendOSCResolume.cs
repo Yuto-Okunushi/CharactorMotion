@@ -98,6 +98,7 @@ public class SendOSCResolume : MonoBehaviour
         Debug.Log("ボタンが押された");
         //OSCメッセージ作成
         var message = new OSCMessage("/composition/layers/" + layerNumber + "/clips/" + columnNumber + "/connect");
+        message.AddValue(OSCValue.Int(1));
         //作成したメッセージを送信
         transmitter.Send(message);
     }
@@ -109,10 +110,9 @@ public class SendOSCResolume : MonoBehaviour
 
         DisplayChange = GameManager.GetPicture();
 
-        // 例えば、レイヤーが1から3まであると仮定してそれぞれ切り替える
-        for (int layer = 1; layer <= 3; layer++)
+        for (int layer = 1; layer <= 3; layer++)  // レイヤー番号を1から3に設定
         {
-            ChangeColumn(layer, DisplayChange);
+            ChangeColumn(layer, DisplayChange);   // 各レイヤーに対して同じDisplayChangeを送る
         }
     }
 
