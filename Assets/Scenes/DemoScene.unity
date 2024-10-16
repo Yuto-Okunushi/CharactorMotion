@@ -142,7 +142,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &75904637
 RectTransform:
   m_ObjectHideFlags: 0
@@ -159,10 +159,10 @@ RectTransform:
   m_Father: {fileID: 1114209035}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -17.5}
-  m_SizeDelta: {x: 100, y: 35}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &75904638
 MonoBehaviour:
@@ -391,7 +391,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2466786070548681179, guid: 7cd9467ec8108054ba87417ad350e2fe, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2466786070548681179, guid: 7cd9467ec8108054ba87417ad350e2fe, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1013,10 +1013,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1412877769}
   - component: {fileID: 1412877771}
-  - component: {fileID: 1412877772}
-  - component: {fileID: 1412877773}
   m_Layer: 0
-  m_Name: Test
+  m_Name: TouchOSCManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1035,7 +1033,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1412877771
 MonoBehaviour:
@@ -1056,49 +1054,6 @@ MonoBehaviour:
   _localHostMode: 0
   _localHost: 192.168.3.2
   _localPort: 8000
---- !u!114 &1412877772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1412877768}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b117a0703b374103913db889311565f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _receiver: {fileID: 1412877771}
-  _address: /example
-  _mapBundle: {fileID: 11400000, guid: fe8e4ea79bde340928891a16b9a0e78e, type: 2}
-  onReceive:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1412877773}
-        m_TargetAssemblyTypeName: OSCReceiverScript, Assembly-CSharp
-        m_MethodName: Test
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1412877773
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1412877768}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8203e81e4a37cd44b06d305f6da6353, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Receiver: {fileID: 1412877771}
 --- !u!1 &1525822957
 GameObject:
   m_ObjectHideFlags: 0
@@ -1179,50 +1134,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1525822957}
   m_CullTransparentMesh: 1
---- !u!1 &1547421091
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1547421093}
-  - component: {fileID: 1547421092}
-  m_Layer: 0
-  m_Name: SCVRoder
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1547421092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1547421091}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c7cf8f4eeef25c49a83bd7b74ac5898, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1547421093
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1547421091}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1581199567
 GameObject:
   m_ObjectHideFlags: 0
@@ -1347,7 +1258,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1590092445
 MonoBehaviour:
@@ -1379,14 +1290,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _receiver: {fileID: 1412877771}
-  _address: /button2
+  _address: /button2/press
   _mapBundle: {fileID: 0}
   onReceive:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1590092448}
         m_TargetAssemblyTypeName: SendOSCResolume, Assembly-CSharp
-        m_MethodName: ChangeAllLayers
+        m_MethodName: SendScvDate2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1398,7 +1309,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1590092448}
         m_TargetAssemblyTypeName: SendOSCResolume, Assembly-CSharp
-        m_MethodName: SendScvDate2
+        m_MethodName: ChangeAllLayers
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1433,7 +1344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _receiver: {fileID: 1412877771}
-  _address: /button1
+  _address: /button1/press
   _mapBundle: {fileID: 0}
   onReceive:
     m_PersistentCalls:
@@ -1610,7 +1521,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1962157200
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1627,10 +1538,10 @@ RectTransform:
   m_Father: {fileID: 1114209035}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -27.5}
-  m_SizeDelta: {x: 100, y: 35}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1962157201
 MonoBehaviour:
@@ -1678,24 +1589,24 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1962157204}
         m_TargetAssemblyTypeName: SendOSCResolume, Assembly-CSharp
-        m_MethodName: ChangeAllLayers
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1962157204}
-        m_TargetAssemblyTypeName: SendOSCResolume, Assembly-CSharp
         m_MethodName: SendScvDate2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1962157204}
+        m_TargetAssemblyTypeName: SendOSCResolume, Assembly-CSharp
+        m_MethodName: ChangeAllLayers
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
