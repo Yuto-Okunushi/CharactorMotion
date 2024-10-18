@@ -7,6 +7,8 @@ using System.IO;　//追加
 
 public class SendOSCResolume : MonoBehaviour
 {
+    public Animator animator;       //アニメーターの参照
+
     public string ipAddress = "127.0.0.1";      //Resolume
     public int port = 7000;     //ResolumeのOSCポート番号
     public OSCTransmitter transmitter;      //OSCのTransmitter参照
@@ -79,13 +81,15 @@ public class SendOSCResolume : MonoBehaviour
 
 
         //intに変換
-        int animation = int.Parse(animationcel);
         int voice = int.Parse(voicecel);
         int picture = int.Parse(picturecel);
 
+        //floatに変換
+        float animationnum = float.Parse(animationcel);
+
 
         GameManager.SetQuestion(questioncel);
-        GameManager.SetAnimation(animation);
+        GameManager.SetAnimation(animationnum);
         GameManager.SetVoice(voice);
         GameManager.SetPicture(picture);
         GameManager.SetAnswer(answercel);
@@ -114,6 +118,12 @@ public class SendOSCResolume : MonoBehaviour
         {
             ChangeColumn(layer, DisplayChange);   // 各レイヤーに対して同じDisplayChangeを送る
         }
+    }
+
+    public void PlayAnimation()
+    {
+        float animgetnumber = GameManager.GetAnimation();
+        animator.SetFloat("OSCFloatValue", animgetnumber);
     }
 
     

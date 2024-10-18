@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
 
     //==SCV”’ló‚¯“n‚µŠÖ˜A=========================================================
     public string questionContents;
-    public int animationNumber;
+    public float animationNumber;
     public int voiceNumber;
     public int pictureNumber;
     public string answerContents;
@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
         return instance.questionContents;
     }
 
-    static public int GetAnimation()
+    static public float GetAnimation()
     {
         return instance.animationNumber;
     }
@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour
         instance.questionContents = value;
     }
 
-    static public void SetAnimation(int value)
+    static public void SetAnimation(float value)
     {
         instance.animationNumber = value;
     }
