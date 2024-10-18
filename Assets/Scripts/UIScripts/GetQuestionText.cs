@@ -11,7 +11,6 @@ public class GetQuestionText : MonoBehaviour
     public string questionContents;
     public string answerContens;
 
-    public int OSCcheckint;
 
     private void Start()
     {
