@@ -9,6 +9,7 @@ public class SendOSCResolume : MonoBehaviour
 {
     public Animator animator;       //アニメーターの参照
 
+
     public string ipAddress = "127.0.0.1";      //Resolume
     public int port = 7000;     //ResolumeのOSCポート番号
     public OSCTransmitter transmitter;      //OSCのTransmitter参照
@@ -19,6 +20,8 @@ public class SendOSCResolume : MonoBehaviour
     //CSV関連
     private TextAsset csvFile; // CSVファイル
     private List<string[]> csvData = new List<string[]>(); // CSVファイルの中身を入れるリスト
+
+    public bool IsMoving = false;
 
     // Start is called before the first frame update
     void Start()
@@ -122,9 +125,28 @@ public class SendOSCResolume : MonoBehaviour
 
     public void PlayAnimation()
     {
-        float animgetnumber = GameManager.GetAnimation();
-        animator.SetFloat("OSCFloatValue", animgetnumber);
+        IsMoving = true;
+        
+        if(IsMoving)
+        {
+            float animgetnumber = GameManager.GetAnimation();
+            animator.SetFloat("OSCFloatValue", animgetnumber);
+            animator.SetBool("IsMoving", true);  // ブレンドツリーを再生
+            
+        }
+        else
+        {
+            animator.SetBool("isMoving", false);  // ブレンドツリーを無効にしてidleを再生
+        }
+
     }
 
-    
+    public void FlugFalse()
+    {
+        Debug.Log("関数が実行されているよ");
+        IsMoving = false;
+        animator.SetBool("IsMoving", false);  // ブレンドツリーを無効にしてidleを再生
+
+    }
+
 }
