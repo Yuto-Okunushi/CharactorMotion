@@ -52,6 +52,8 @@ public class SendOSCResolume : MonoBehaviour
 
     public void SendScvDate()
     {
+
+        Debug.Log("スクリプトが実行されてるよ");
         //SCVファイルの参照
         string questioncel = csvData[1][0];
         string animationcel = csvData[1][1];
@@ -113,6 +115,8 @@ public class SendOSCResolume : MonoBehaviour
     // すべてのレイヤーのColumnを変更する
     public void ChangeAllLayers()
     {
+        Debug.Log("スクリプトが実行されてるよ");
+
         Debug.Log("すべてのレイヤーのコラム: " + DisplayChange + " に切り替え");
 
         DisplayChange = GameManager.GetPicture();
@@ -143,7 +147,6 @@ public class SendOSCResolume : MonoBehaviour
 
     public void FlugFalse()
     {
-        Debug.Log("関数が実行されているよ");
         IsMoving = false;
         animator.SetBool("IsMoving", false);  // ブレンドツリーを無効にしてidleを再生
 
