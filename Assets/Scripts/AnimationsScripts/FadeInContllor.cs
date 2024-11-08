@@ -36,7 +36,7 @@ public class FadeInContllor : MonoBehaviour
         miraiKomachi.SetActive(false);
     }
     //アニメーションの終わりにシーンを変化させる
-    public void OnFadeOutComplete()
+    public void OnFadeInComplete()
     {
         SceneManager.LoadScene(sceneToLoad);
     }
