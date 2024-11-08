@@ -122,7 +122,7 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 0.5
-    functionName: FadeOutObjectDelete
+    functionName: FadeOutObjectFalse
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

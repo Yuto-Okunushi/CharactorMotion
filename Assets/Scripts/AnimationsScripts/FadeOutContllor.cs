@@ -17,7 +17,7 @@ public class FadeOutContllor : MonoBehaviour
     {
         miraiKomachi.SetActive(false);
     }
-    public void FadeOutObjectDelete()
+    public void FadeOutObjectFalse()
     {
         fadeOutPanel.SetActive(false);
     }
