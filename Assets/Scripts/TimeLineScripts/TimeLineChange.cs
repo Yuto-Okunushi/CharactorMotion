@@ -5,6 +5,7 @@ using UnityEngine.Playables;
 
 public class TimeLineChange : MonoBehaviour
 {
+    //タイムラインをアタッチ
     [SerializeField] private PlayableDirector[] playableDirectors;
 
     private void Start()

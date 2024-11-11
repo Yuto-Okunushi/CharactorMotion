@@ -23,7 +23,6 @@ public class SendOSCResolume : MonoBehaviour
 
     public bool IsMoving = false;
 
-    // Start is called before the first frame update
     void Start()
     {
         //初期化
@@ -43,17 +42,12 @@ public class SendOSCResolume : MonoBehaviour
             csvData.Add(line.Split(',')); // csvDataリストに追加する
         }
 
-        for (int i = 0; i < csvData.Count; i++) // csvDataリストの条件を満たす値の数（全て）
-        {
-            // データの表示
-            Debug.Log("質問内容：" + csvData[i][0] + ", Animation：" + csvData[i][1] + ", Voice: " + csvData[i][2] + "picture: " + csvData[i][3]);
-        }
+        
     }
 
     public void SendScvDate()
     {
 
-        Debug.Log("スクリプトが実行されてるよ");
         //SCVファイルの参照
         string questioncel = csvData[1][0];
         string animationcel = csvData[1][1];
@@ -92,7 +86,7 @@ public class SendOSCResolume : MonoBehaviour
         //floatに変換
         float animationnum = float.Parse(animationcel);
 
-
+        //ゲームマネージャーからデータ受け渡し
         GameManager.SetQuestion(questioncel);
         GameManager.SetAnimation(animationnum);
         GameManager.SetVoice(voice);
@@ -104,7 +98,6 @@ public class SendOSCResolume : MonoBehaviour
 
     public void ChangeColumn(int layerNumber, int columnNumber)
     {
-        Debug.Log("ボタンが押された");
         //OSCメッセージ作成
         var message = new OSCMessage("/composition/layers/" + layerNumber + "/clips/" + columnNumber + "/connect");
         message.AddValue(OSCValue.Int(1));
@@ -115,15 +108,12 @@ public class SendOSCResolume : MonoBehaviour
     // すべてのレイヤーのColumnを変更する
     public void ChangeAllLayers()
     {
-        Debug.Log("スクリプトが実行されてるよ");
-
-        Debug.Log("すべてのレイヤーのコラム: " + DisplayChange + " に切り替え");
-
+        //ゲームマネージャーからデータ受け取り
         DisplayChange = GameManager.GetPicture();
 
-        for (int layer = 1; layer <= 3; layer++)  // レイヤー番号を1から3に設定
+        for (int layer = 1; layer <= 3; layer++)  //レイヤー番号を1から3に設定
         {
-            ChangeColumn(layer, DisplayChange);   // 各レイヤーに対して同じDisplayChangeを送る
+            ChangeColumn(layer, DisplayChange);   //各レイヤーに対して同じDisplayChangeを送る
         }
     }
 
@@ -135,12 +125,12 @@ public class SendOSCResolume : MonoBehaviour
         {
             float animgetnumber = GameManager.GetAnimation();
             animator.SetFloat("OSCFloatValue", animgetnumber);
-            animator.SetBool("IsMoving", true);  // ブレンドツリーを再生
+            animator.SetBool("IsMoving", true);  //ブレンドツリーを再生
             
         }
         else
         {
-            animator.SetBool("isMoving", false);  // ブレンドツリーを無効にしてidleを再生
+            animator.SetBool("isMoving", false);  //ブレンドツリーを無効にしてidleを再生
         }
 
     }
@@ -148,8 +138,7 @@ public class SendOSCResolume : MonoBehaviour
     public void FlugFalse()
     {
         IsMoving = false;
-        animator.SetBool("IsMoving", false);  // ブレンドツリーを無効にしてidleを再生
-
+        animator.SetBool("IsMoving", false);  //ブレンドツリーを無効にしてidleを再生
     }
 
 }

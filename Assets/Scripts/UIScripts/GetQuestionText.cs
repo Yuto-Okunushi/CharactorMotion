@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class GetQuestionText : MonoBehaviour
 {
+    //画面に表示するテキストアタッチ
     [SerializeField] Text questionText;
     [SerializeField] Text answerText;
     public string questionContents;
@@ -26,11 +27,10 @@ public class GetQuestionText : MonoBehaviour
     //SCVの内容を表示
     public void TextDisplay()
     {
+        //ゲームマネージャーからデータを受け取り
         questionContents = GameManager.GetQuestion();
         answerContens = GameManager.GetAnswer();
         questionText.text = questionContents;
         answerText.text = answerContens;
-
-        
     }
 }
