@@ -45,7 +45,7 @@ public class SendOSCResolume : MonoBehaviour
         
     }
 
-    public void SendScvDate()
+    public void SendCsvDate()
     {
 
         //SCVファイルの参照
